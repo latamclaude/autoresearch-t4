@@ -1,10 +1,11 @@
 """
-One-time data preparation for autoresearch experiments.
-Downloads data shards and trains a BPE tokenizer.
+Tokenizer training and runtime utilities for autoresearch-t4.
+
+Data download is handled by the Colab notebook (Cell 1).
+This script trains the BPE tokenizer on pre-downloaded parquet shards.
 
 Usage:
-    python prepare.py                  # full prep (download + tokenizer)
-    python prepare.py --num-shards 8   # download only 8 shards (for testing)
+    python prepare.py   # train tokenizer (data must already exist)
 
 Data and tokenizer are stored in ~/.cache/autoresearch/.
 """
