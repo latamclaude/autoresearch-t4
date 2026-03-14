@@ -557,7 +557,7 @@ while True:
 
     # Fast fail: abort if loss is exploding or NaN
     if math.isnan(train_loss_f) or train_loss_f > 100:
-        print("FAIL")
+        print(f"\nFAIL at step {step}: raw_loss={train_loss_f}")
         exit(1)
 
     torch.cuda.synchronize()
